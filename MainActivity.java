@@ -1,4 +1,4 @@
-package com.example.kunalfarmah.realtimetictactoe;
+package com.apps.kunalfarmah.realtimetictactoe;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.kunalfarmah.realtimetictactoe.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         i7 = (ImageView) findViewById(R.id.imageView7);
         i8 = (ImageView) findViewById(R.id.imageView8);
         i9 = (ImageView) findViewById(R.id.imageView9);
-        o = findViewById(R.id.checko);
-        x = findViewById(R.id.checkx);
+        o = findViewById(R.id.testo);
+        x = findViewById(R.id.testx);
 
         Toast.makeText(getApplicationContext(), "Player 1 Goes first", Toast.LENGTH_SHORT).show();
 
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
                 i1.setEnabled(false);   // disabling the onClickListener after first click
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 // if a player wins, start gameover activity with a delay of 1.4 seconds
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //checking if a player already won on clicking
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 if (win) {
@@ -109,7 +110,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -128,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
                 i3.setEnabled(false);
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 if (win) {
@@ -136,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -149,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -167,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
 
                 i4.setEnabled(false);
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 if (win) {
@@ -175,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -188,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -206,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
 
                 i5.setEnabled(false);
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 if (win) {
@@ -214,7 +228,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -227,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -245,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
 
                 i6.setEnabled(false);
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 if (win) {
@@ -253,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -266,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -285,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
                 i7.setEnabled(false);
 
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 if (win) {
@@ -293,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -306,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -325,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
                 i8.setEnabled(false);
 
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 if (win) {
@@ -333,7 +347,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -346,7 +360,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -366,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
 
                 i9.setEnabled(false);
 
-                if (turns >= 4)
+                if (turns >= 4 && turns < 8)
                     win = winner();
 
                 if (win) {
@@ -374,7 +388,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -387,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -416,80 +430,91 @@ public class MainActivity extends AppCompatActivity {
         //cases for winning
 
         // horizontal line
-        if (a.getConstantState().equals(b.getConstantState()) && b.getConstantState().equals(c.getConstantState())) {
-            if (a.getConstantState().equals(p1.getConstantState()))
+        if (a.getConstantState() != null && a.getConstantState().equals(b.getConstantState()) && b.getConstantState().equals(c.getConstantState())) {
+            if (a.getConstantState() != null && a.getConstantState().equals(p1.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else if (a.getConstantState().equals(p2.getConstantState()))
+                return true;
+            } else if (a.getConstantState().equals(p2.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
-            return true;
+                return true;
+            }
         }
-        else if (d.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(f.getConstantState())) {
-            if (d.getConstantState().equals(p1.getConstantState()))
+        if (d.getConstantState() != null && d.getConstantState() != null && d.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(f.getConstantState())) {
+            if (d.getConstantState().equals(p1.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else if (d.getConstantState().equals(p2.getConstantState()))
+                return true;
+            } else if (d.getConstantState().equals(p2.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
-            return true;
+                return true;
+            }
         }
-        else if (g.getConstantState().equals(h.getConstantState()) && h.getConstantState().equals(i.getConstantState())) {
-            if (g.getConstantState().equals(p1.getConstantState()))
+        if (g.getConstantState() != null && g.getConstantState() != null && g.getConstantState().equals(h.getConstantState()) && h.getConstantState().equals(i.getConstantState())) {
+            if (g.getConstantState().equals(p1.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else if (g.getConstantState().equals(p2.getConstantState()))
+                return true;
+            } else if (g.getConstantState().equals(p2.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
-            return true;
+                return true;
+            }
         }
 
 
         // vertical line
 
-        else if (a.getConstantState().equals(d.getConstantState()) && d.getConstantState().equals(g.getConstantState())) {
-            if (a.getConstantState().equals(p1.getConstantState()))
+        if (a.getConstantState() != null && a.getConstantState().equals(d.getConstantState()) && d.getConstantState().equals(g.getConstantState())) {
+            if (a.getConstantState().equals(p1.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else if (a.getConstantState().equals(p2.getConstantState()))
+                return true;
+            } else if (a.getConstantState().equals(p2.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
-            return true;
+                return true;
+            }
         }
-        else if (b.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(h.getConstantState())) {
-            if (b.getConstantState().equals(p1.getConstantState()))
+        if (b.getConstantState() != null && b.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(h.getConstantState())) {
+            if (b.getConstantState().equals(p1.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else if (b.getConstantState().equals(p2.getConstantState()))
+                return true;
+            } else if (b.getConstantState().equals(p2.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
 
-            return true;
+                return true;
+            }
         }
-        else if (c.getConstantState().equals(f.getConstantState()) && f.getConstantState().equals(i.getConstantState())) {
-            if (c.getConstantState().equals(p1.getConstantState()))
+        if (c.getConstantState() != null && c.getConstantState().equals(f.getConstantState()) && f.getConstantState().equals(i.getConstantState())) {
+            if (c.getConstantState().equals(p1.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else if (c.getConstantState().equals(p2.getConstantState()))
+                return true;
+            } else if (c.getConstantState().equals(p2.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
-            return true;
+                return true;
+            }
         }
 
         // diagonal 1
 
-        else if (a.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(i.getConstantState())) {
-            if (a.getConstantState().equals(p1.getConstantState()))
+        if (a.getConstantState() != null && a.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(i.getConstantState())) {
+            if (a.getConstantState().equals(p1.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else if (a.getConstantState().equals(p2.getConstantState()))
+                return true;
+            } else if (a.getConstantState().equals(p2.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
-
-            return true;
+                return true;
+            }
         }
 
         //diagonal 2
-        else if (c.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(g.getConstantState())) {
-            if (c.getConstantState().equals(p1.getConstantState()))
+        if (c.getConstantState() != null && c.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(g.getConstantState())) {
+            if (c.getConstantState().equals(p1.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else if (c.getConstantState().equals(p2.getConstantState()))
+                return true;
+            } else if (c.getConstantState().equals(p2.getConstantState())) {
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
-
-            return true;
+                return true;
+            }
         }
-
-        else
 
             return false;
 
     }
-
 
 }
