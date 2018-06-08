@@ -1,8 +1,7 @@
-package com.apps.kunalfarmah.realtimetictactoe;
+package com.example.kunalfarmah.realtimetictactoe;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,13 +9,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.kunalfarmah.realtimetictactoe.R;
-
 
 public class MainActivity extends AppCompatActivity {
 
     int turns = -1;
-    boolean win= false;
+    boolean win = false;
 
 
     ImageView i1;
@@ -34,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_port);
+        setContentView(R.layout.activity_main);
 
         i1 = (ImageView) findViewById(R.id.imageView1);
         i2 = (ImageView) findViewById(R.id.imageView2);
@@ -45,11 +42,10 @@ public class MainActivity extends AppCompatActivity {
         i7 = (ImageView) findViewById(R.id.imageView7);
         i8 = (ImageView) findViewById(R.id.imageView8);
         i9 = (ImageView) findViewById(R.id.imageView9);
-        o = findViewById(R.id.testo);
-        x= findViewById(R.id.testx);
+        o = findViewById(R.id.checko);
+        x = findViewById(R.id.checkx);
 
         Toast.makeText(getApplicationContext(), "Player 1 Goes first", Toast.LENGTH_SHORT).show();
-
 
 
         i1.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +68,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -100,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -127,7 +136,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -153,7 +175,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -179,7 +214,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -205,7 +253,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -232,7 +293,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -259,7 +333,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -287,7 +374,20 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
 
-                            Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
+                            startActivity(gameover);
+                        }
+                    }, 1400);
+                }
+
+                if (turns == 8 && !win) {
+                    Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent gameover = new Intent(MainActivity.this, com.example.kunalfarmah.realtimetictactoe.gameover.class);
                             startActivity(gameover);
                         }
                     }, 1400);
@@ -295,39 +395,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        if (turns >= 4) {
-//            win = winner();
-//
-//            // if a player wins, start gameover activity with a delay of 1.4 seconds
-//
-//            if (win) {
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//
-//                        Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
-//                        startActivity(gameover);
-//                    }
-//                }, 1400);
-//            }
-//        }
-
-        if (turns == 8 && !win) {
-            Toast.makeText(getApplicationContext(), "Drawn!!", Toast.LENGTH_LONG).show();
-
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-
-                    Intent gameover = new Intent(MainActivity.this, com.apps.kunalfarmah.realtimetictactoe.gameover.class);
-                    startActivity(gameover);
-                }
-            }, 1400);
-        }
 
     }
-
-
+    
     private boolean winner() {
 
         Drawable a = i1.getDrawable();
@@ -339,10 +409,8 @@ public class MainActivity extends AppCompatActivity {
         Drawable g = i7.getDrawable();
         Drawable h = i8.getDrawable();
         Drawable i = i9.getDrawable();
-        Drawable p1 =  o.getDrawable();
-        Drawable p2= x.getDrawable();
-
-
+        Drawable p1 = o.getDrawable();
+        Drawable p2 = x.getDrawable();
 
 
         //cases for winning
@@ -351,19 +419,21 @@ public class MainActivity extends AppCompatActivity {
         if (a.getConstantState().equals(b.getConstantState()) && b.getConstantState().equals(c.getConstantState())) {
             if (a.getConstantState().equals(p1.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else
+            else if (a.getConstantState().equals(p2.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
             return true;
-        } else if (d.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(f.getConstantState())) {
+        }
+        else if (d.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(f.getConstantState())) {
             if (d.getConstantState().equals(p1.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else
+            else if (d.getConstantState().equals(p2.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
             return true;
-        } else if (g.getConstantState().equals(h.getConstantState()) && h.getConstantState().equals(i.getConstantState())) {
+        }
+        else if (g.getConstantState().equals(h.getConstantState()) && h.getConstantState().equals(i.getConstantState())) {
             if (g.getConstantState().equals(p1.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else
+            else if (g.getConstantState().equals(p2.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
             return true;
         }
@@ -374,20 +444,22 @@ public class MainActivity extends AppCompatActivity {
         else if (a.getConstantState().equals(d.getConstantState()) && d.getConstantState().equals(g.getConstantState())) {
             if (a.getConstantState().equals(p1.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else
+            else if (a.getConstantState().equals(p2.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
             return true;
-        } else if (b.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(h.getConstantState())) {
+        }
+        else if (b.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(h.getConstantState())) {
             if (b.getConstantState().equals(p1.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else
+            else if (b.getConstantState().equals(p2.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
 
             return true;
-        } else if (c.getConstantState().equals(f.getConstantState()) && f.getConstantState().equals(i.getConstantState())) {
+        }
+        else if (c.getConstantState().equals(f.getConstantState()) && f.getConstantState().equals(i.getConstantState())) {
             if (c.getConstantState().equals(p1.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else
+            else if (c.getConstantState().equals(p2.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
             return true;
         }
@@ -397,7 +469,7 @@ public class MainActivity extends AppCompatActivity {
         else if (a.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(i.getConstantState())) {
             if (a.getConstantState().equals(p1.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else
+            else if (a.getConstantState().equals(p2.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
 
             return true;
@@ -407,11 +479,14 @@ public class MainActivity extends AppCompatActivity {
         else if (c.getConstantState().equals(e.getConstantState()) && e.getConstantState().equals(g.getConstantState())) {
             if (c.getConstantState().equals(p1.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 1 Wins", Toast.LENGTH_LONG).show();
-            else
+            else if (c.getConstantState().equals(p2.getConstantState()))
                 Toast.makeText(getApplicationContext(), "Player 2 Wins", Toast.LENGTH_LONG).show();
 
             return true;
-        } else
+        }
+
+        else
+
             return false;
 
     }
