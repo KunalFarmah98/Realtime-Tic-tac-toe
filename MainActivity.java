@@ -397,7 +397,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    
+
     private boolean winner() {
 
         Drawable a = i1.getDrawable();
